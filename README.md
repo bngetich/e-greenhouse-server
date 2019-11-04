@@ -29,4 +29,4 @@ or:
 ./gradlew test
 ```
 ## Copyright
-Released under the Apache License 2.0. See the [LICENSE](https://github.com/codecentric/springboot-sample-app/blob/master/LICENSE) file.
+Released under the MIT Lincense See the [LICENSE](https://github.com/bngetich/e-greenhouse/blob/master/LICENSE) file.
