@@ -12,4 +12,6 @@ public class ThinkSpeakJsonResponse {
     public Channel channel;
     public List<Feed> feeds;
 
+    public ThinkSpeakJsonResponse() {
+    }
 }

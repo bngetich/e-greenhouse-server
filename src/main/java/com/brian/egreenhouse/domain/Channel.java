@@ -1,6 +1,7 @@
 package com.brian.egreenhouse.domain;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.geo.GeoJsonPoint;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -11,30 +12,31 @@ import java.util.List;
 
 @Document
 @Data
+@NoArgsConstructor
 public class Channel {
 
     @Id
-    private String id;
+    private int id;
 
     private String name;
 
     private GeoJsonPoint location;
 
-    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-    private LocalDateTime createdAt;
+    private String field1;
+
+    private String field2;
+
+    private String field3;
 
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-    private LocalDateTime updatedAt;
+    private LocalDateTime created_at;
+
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
+    private LocalDateTime updated_at;
 
     private Configuration configuration;
 
     private List<Feed> feeds;
 
-    public Channel(String id, String name, GeoJsonPoint location, LocalDateTime createdAt, LocalDateTime updatedAt) {
-        this.id = id;
-        this.name = name;
-        this.location = location;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
-    }
+
 }

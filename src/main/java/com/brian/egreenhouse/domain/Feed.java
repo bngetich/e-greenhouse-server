@@ -1,30 +1,23 @@
 package com.brian.egreenhouse.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
-import org.springframework.data.mongodb.core.index.IndexDirection;
-import org.springframework.data.mongodb.core.index.Indexed;
+import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 
 @Data
+@NoArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Feed {
-    @Indexed(direction = IndexDirection.ASCENDING)
-    private int entryId;
-
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-    private LocalDateTime createdAt;
+    private LocalDateTime created_at;
 
-    private int temperature;
+    private int field1;
 
-    private int humidity;
+    private int field2;
 
-    private int soilMoisture;
+    private int field3;
 
-    public Feed(LocalDateTime createdAt, int temperature, int humidity, int soilMoisture) {
-        this.createdAt = createdAt;
-        this.temperature = temperature;
-        this.humidity = humidity;
-        this.soilMoisture = soilMoisture;
-    }
 }

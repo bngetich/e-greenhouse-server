@@ -8,5 +8,5 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @Configuration
 @EnableScheduling
 @ComponentScan(basePackageClasses = SensorDataWebClient.class)
-public class MockSensorDataConfig {
+public class SensorDataWebClientConfig {
 }
