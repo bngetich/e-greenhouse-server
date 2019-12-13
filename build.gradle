@@ -27,7 +27,8 @@ dependencies {
 	testCompile'io.projectreactor:reactor-test'
 	testImplementation 'de.flapdoodle.embed:de.flapdoodle.embed.mongo'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
-	implementation 'org.springframework.security.oauth:spring-security-oauth2:2.3.3.RELEASE'
+	compile 'org.springframework.security:spring-security-oauth2-resource-server'
+	compile 'org.springframework.security:spring-security-oauth2-jose'
 	implementation 'com.okta.spring:okta-spring-boot-starter:1.3.0'
 }
 

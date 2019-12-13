@@ -15,8 +15,10 @@ public class SecurityConfiguration {
                 .authorizeExchange()
                 .anyExchange().authenticated()
                 .and()
+                .oauth2Login()
+                .and()
                 .oauth2ResourceServer()
-                .jwt();
+                    .jwt().and().and();
 
         Okta.configureResourceServer401ResponseBody(http);
         return http.build();
