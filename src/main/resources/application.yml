@@ -15,3 +15,7 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: https://dev-722658.okta.com/oauth2/default
+
+  data:
+    mongodb:
+      uri: mongodb://localhost/egreenhouse
