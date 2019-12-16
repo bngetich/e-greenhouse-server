@@ -1,7 +1,7 @@
 package com.brian.egreenhouse.web.rest.client;
 
 import com.brian.egreenhouse.domain.Feed;
-import com.brian.egreenhouse.service.ChannelService;
+import com.brian.egreenhouse.service.FeedService;
 import com.brian.egreenhouse.web.rest.util.RandomUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +19,7 @@ public class SensorDataWebClient {
     private WebClient client;
 
     @Autowired
-    ChannelService service;
+    FeedService service;
 
     private static final Logger log = LoggerFactory.getLogger(SensorDataWebClient.class);
 

@@ -8,7 +8,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Document
 @Data
@@ -35,8 +34,6 @@ public class Channel {
     private LocalDateTime updated_at;
 
     private Configuration configuration;
-
-    private List<Feed> feeds;
 
 
 }

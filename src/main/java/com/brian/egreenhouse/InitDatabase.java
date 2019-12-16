@@ -26,8 +26,7 @@ public class InitDatabase {
                     .bodyToMono(ThinkSpeakJsonResponse.class)
                     .log("init")
                     .block();
-
-            response.channel.setFeeds(response.feeds);
+            
             operations.save(response.channel);
         };
     }

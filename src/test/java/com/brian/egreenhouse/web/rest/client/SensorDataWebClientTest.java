@@ -56,9 +56,9 @@ public class SensorDataWebClientTest {
                 .flatMap(response -> Flux.fromIterable(response.feeds))
                 .next())
                 .expectNextMatches(feed ->{
-                    assertThat(feed.getField1()).isEqualTo(temperature);
-                    assertThat(feed.getField2()).isEqualTo(humidity);
-                    assertThat(feed.getField3()).isEqualTo(soilMoisture);
+                    assertThat(feed.getTemperature()).isEqualTo(temperature);
+                    assertThat(feed.getHumidity()).isEqualTo(humidity);
+                    assertThat(feed.getSoilMoisture()).isEqualTo(soilMoisture);
                     return true;
                 });
     }
